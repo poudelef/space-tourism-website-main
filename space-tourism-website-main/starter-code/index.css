@@ -1,0 +1,260 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    
+    background-image: url('./assets/home/background-home-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    font-family: 'Kalnia', serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+nav{
+    height: 80px;
+    background-color: rgb(12, 12, 20,0.5);
+}
+
+nav img{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    
+}
+
+nav ul{
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin-inline: 20px;
+} 
+
+nav ul li a{
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    
+}
+
+
+#check{
+    display: none;
+}
+
+label .hamburger, label .close {
+    position: relative;
+    float: right;
+    line-height: 80px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+    top: 30px;
+}
+
+label.hamburger{
+    display: block;
+}
+/* Body section starts here */
+
+.main{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.rightside{
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    padding: 15px;
+}
+
+.rightside h3{
+    margin-top: 150px;
+}
+.rightside h1{
+    margin-top: 20px;
+    font-size: 7rem;
+}
+.rightside h4{
+    margin-top: 20px;
+    padding: 80px;
+    margin: 5px;
+}
+
+.leftside{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-inside{
+    position: relative;
+    height: 190px;
+    width: 190px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-inside:hover{
+    box-shadow: 0 0 30px 5px wheat;
+}
+
+
+@media (max-width:960px){
+   body{
+    background-image: url('./assets/home/background-home-tablet.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+   }
+   nav img{
+    left:5%;
+   }
+   nav ul li a{
+    font-size: 15px;
+   }
+
+   
+
+   /*body*/
+   .main{
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+   }
+   
+   .leftside {
+        position: relative;
+        height: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .rightside {
+        position: relative;
+        text-align: center;
+        height: 80vh;
+        width: 100%;
+        color: white;
+        padding: 15px;
+    }
+
+
+    .rightside h3{
+        margin-top: 150px;
+        font-size: 15px;
+    }
+    .rightside h1{
+        margin-top: 20px;
+        font-size: 5rem;
+    }
+    .rightside h4{
+        margin-top: 5px;
+        padding: 10px;
+        margin: 5px;
+        font-size: 13px;
+    } 
+    .left-inside{
+        height: 150px;
+        width: 150px;
+        border-radius: 80px;
+    }
+
+}
+
+
+
+@media (max-width:660px){
+    body{
+    background-image: url('./assets/home/background-home-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    }
+    nav img{
+        left:8%
+    }
+    nav ul li a{
+        font-size: 17px;
+    }    
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 40px;
+        border-top-left-radius: 40px; 
+        background: #1b1a2c;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1
+    
+       }
+    
+       
+       label .hamburger{
+        display: block;
+        z-index: 2;
+       }
+    
+       nav ul li{
+        display:block;
+        margin-top: 50px;
+        line-height: 30px;
+       }
+       #check:checked ~ ul{
+         left: 0;
+       } 
+    
+       #check:checked ~ label .hamburger{
+        display: none;
+       }
+       #check:checked ~ label .close{
+        display: block;
+       }
+
+    .rightside h1{
+        font-size: 4rem;
+    }
+}
